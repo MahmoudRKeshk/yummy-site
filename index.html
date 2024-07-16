@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Yummy</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+</style>
+<body id="body">
+  <nav class="closed" id="nav">
+    <div class="nav__icon" id="nav_icon">
+      <svg class="medium__icon white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 18L20 18" stroke-width="2" stroke-linecap="round"/>
+        <path d="M4 12L20 12" stroke-width="2" stroke-linecap="round"/>
+        <path d="M4 6L20 6"   stroke-width="2" stroke-linecap="round"/>
+        </svg>
+    </div>
+    <div class="nav__close" id="nav_close">
+      <svg class="medium__icon white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="Menu / Close_SM">
+        <path id="Vector" d="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        </svg>
+    </div>
+    <div class="nav__search">
+      <input type="text" class="search__box" id="search_by_name" placeholder="search by name">
+      <input type="text" class="search__box" id="search_by_letter" placeholder="search by first letter" maxlength="1">
+    </div>
+    <div class="nav__menu">
+      <ul>
+        <li class="menu__item" id="category_menu_item">categories</li>
+        <li class="menu__item" id="areas_menu_item">area</li>
+        <li class="menu__item" id="ingredients_menu_item">ingredients</li>
+        <li class="menu__item" id="contact_menu_item">contact</li>
+      </ul>
+    </div>
+    <div class="nav__footer">
+      <ul>
+        <li>
+          <svg class="small__icon white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z"/>
+          </svg>
+        </li>
+        <li>
+          <svg class="small__icon white"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="world" class="icon glyph"><path d="M8.5,12c0,1,0,2,.12,3L8.39,15a12.36,12.36,0,0,0-3.08,1.35,10.06,10.06,0,0,0-1.61,1.2,10,10,0,0,1,0-11.14,10.06,10.06,0,0,0,1.61,1.2A12.29,12.29,0,0,0,8.38,9L8.62,9C8.54,10,8.5,11,8.5,12ZM4.3,5.62A9.55,9.55,0,0,0,5.91,6.83,11.11,11.11,0,0,0,8.66,8h0a24.72,24.72,0,0,1,.6-3.55,11,11,0,0,1,.79-2.3A10.05,10.05,0,0,0,4.3,5.62Zm9.61-3.44a11,11,0,0,1,.79,2.3A24.72,24.72,0,0,1,15.3,8h0a11.18,11.18,0,0,0,2.76-1.19A9.55,9.55,0,0,0,19.7,5.62,10.05,10.05,0,0,0,13.91,2.18ZM9.68,15.73a24.3,24.3,0,0,0,.74,4.12A7.82,7.82,0,0,0,11.31,22L12,22l.69,0a7.82,7.82,0,0,0,.89-2.13,24.3,24.3,0,0,0,.74-4.12A11.69,11.69,0,0,0,9.68,15.73ZM14.4,9.27A12.6,12.6,0,0,1,12,9.5a12.6,12.6,0,0,1-2.4-.23c-.07.85-.1,1.77-.1,2.73s0,1.88.1,2.74a12.7,12.7,0,0,1,4.8,0c.07-.85.1-1.77.1-2.73S14.47,10.12,14.4,9.27Zm-.82-5.12A7.82,7.82,0,0,0,12.69,2L12,2l-.69,0a7.82,7.82,0,0,0-.89,2.13,24.3,24.3,0,0,0-.74,4.12,11.69,11.69,0,0,0,4.64,0A24.3,24.3,0,0,0,13.58,4.15ZM20.3,6.43a10.06,10.06,0,0,1-1.61,1.2A12.36,12.36,0,0,1,15.61,9L15.38,9c.08,1,.12,2,.12,3s0,2-.12,3l.24.06a12.29,12.29,0,0,1,3.07,1.35,10.06,10.06,0,0,1,1.61,1.2,10,10,0,0,0,0-11.14ZM18.09,17.17A11.11,11.11,0,0,0,15.34,16h0a24.72,24.72,0,0,1-.6,3.55,11,11,0,0,1-.79,2.3,10.05,10.05,0,0,0,5.79-3.44A9.55,9.55,0,0,0,18.09,17.17ZM9.3,19.52A24.72,24.72,0,0,1,8.7,16h0a11.18,11.18,0,0,0-2.76,1.19A9.55,9.55,0,0,0,4.3,18.38a10.05,10.05,0,0,0,5.79,3.44A11,11,0,0,1,9.3,19.52Z" style="fill:#231f20"></path></svg>
+        </li>
+        <li>
+          <svg class="small__icon white" viewBox="0 -2 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+            <title>twitter [#154]</title>
+            <desc>Created with Sketch.</desc>
+            <defs>
+        
+        </defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                <g id="Dribbble-Light-Preview" transform="translate(-60.000000, -7521.000000)">
+                    <g id="icons" transform="translate(56.000000, 160.000000)">
+                        <path d="M10.29,7377 C17.837,7377 21.965,7370.84365 21.965,7365.50546 C21.965,7365.33021 21.965,7365.15595 21.953,7364.98267 C22.756,7364.41163 23.449,7363.70276 24,7362.8915 C23.252,7363.21837 22.457,7363.433 21.644,7363.52751 C22.5,7363.02244 23.141,7362.2289 23.448,7361.2926 C22.642,7361.76321 21.761,7362.095 20.842,7362.27321 C19.288,7360.64674 16.689,7360.56798 15.036,7362.09796 C13.971,7363.08447 13.518,7364.55538 13.849,7365.95835 C10.55,7365.79492 7.476,7364.261 5.392,7361.73762 C4.303,7363.58363 4.86,7365.94457 6.663,7367.12996 C6.01,7367.11125 5.371,7366.93797 4.8,7366.62489 L4.8,7366.67608 C4.801,7368.5989 6.178,7370.2549 8.092,7370.63591 C7.488,7370.79836 6.854,7370.82199 6.24,7370.70483 C6.777,7372.35099 8.318,7373.47829 10.073,7373.51078 C8.62,7374.63513 6.825,7375.24554 4.977,7375.24358 C4.651,7375.24259 4.325,7375.22388 4,7375.18549 C5.877,7376.37088 8.06,7377 10.29,7376.99705" id="twitter-[#154]">
+        
+        </path>
+                    </g>
+                </g>
+            </g>
+        </svg>
+        </li>
+      </ul>
+      <p>copyrights © <span id="current_year">2024</span> all rights reserved.</p>
+    </div>
+  </nav>
+
+  <!-- Main Content of the site -->
+  <main>
+    <div class="container" id="container">
+      <h1 class="welcome_header">Welcome to Yummy!</h1>
+    </div>
+  </main>
+
+  <!-- Utilities -->
+   <div class="blur_layer d-none" id="blur_layer"></div>
+   
+  <div class="form_modal d-none" id="contact_modal">
+      <div id="close_contact_modal" class="close_form_modal">
+        <svg class="medium__icon white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <g id="Menu / Close_SM">
+          <path id="Vector" d="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </svg>
+      </div>
+     <h2>We are happy to recieve your feedback</h2>
+      <form action="#">
+       <div class="form-row">
+          <div class="input-data">
+             <input type="text" required>
+             <div class="underline"></div>
+             <label for="">First Name</label>
+          </div>
+          <div class="input-data">
+             <input type="text" required>
+             <div class="underline"></div>
+             <label for="">Last Name</label>
+          </div>
+       </div>
+       <div class="form-row">
+          <div class="input-data">
+             <input type="text" required>
+             <div class="underline"></div>
+             <label for="">Email Address</label>
+          </div>
+          <div class="input-data">
+             <input type="text" maxlength="11" required>
+             <div class="underline"></div>
+             <label for="">phone number</label>
+          </div>
+       </div>
+       <div class="form-row">
+          <div class="input-data textarea">
+              <textarea rows="8" cols="80" required></textarea>
+              <br />
+              <div class="underline"></div>
+              <label for="">Write your message</label>
+              <br />
+              <div class="form-row submit-btn">
+                 <div class="input-data">
+                    <div class="inner"></div>
+                    <input type="submit" value="submit">
+              </div>
+            </div>
+          </div>
+       </div>
+      </form>
+  </div>
+
+  
+  <div class="details_modal d-none" id="details_modal">
+    
+  </div>
+  <script type="module" src="./js/script.js"></script>
+</body>
+</html>
